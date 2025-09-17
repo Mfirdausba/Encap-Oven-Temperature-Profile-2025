@@ -70,7 +70,7 @@ st.markdown(
 
     <div class="custom-header">
         <img src="data:image/png;base64,{logo_base64}" alt="Logo">
-        📈 Encap Oven Dashboard 2025
+        Encap Oven Dashboard 2025
     </div>
     """,
     unsafe_allow_html=True
