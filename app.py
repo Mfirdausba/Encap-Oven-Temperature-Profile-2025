@@ -194,7 +194,7 @@ if selected_measures:
     # --------------------
     # Step 4: Show popup while filtering & generating chart
     # --------------------
-    popup = show_popup("🔄 Processing data...")
+    popup = show_popup("Processing data...")
 
     df = df[(df["DATE"].dt.date >= start_date) & (df["DATE"].dt.date <= end_date)]
 
