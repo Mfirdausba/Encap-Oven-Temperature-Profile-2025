@@ -15,13 +15,14 @@ st.set_page_config(
 )
 
 # --------------------
-# Hide Default Streamlit Menu & Footer
+# Hide Default Streamlit Menu, Footer & Toolbar
 # --------------------
 hide_st_style = """
 <style>
 #MainMenu {visibility: hidden;} 
 footer {visibility: hidden;}    
 header {visibility: hidden;}    
+.stAppToolbar {visibility: hidden;}   /* Hides bottom-right Manage app toolbar */
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -145,7 +146,6 @@ datasets = {
     "dataset2": pd.read_excel("MEM#01 & MEM#02 & BMV#91.xlsx", sheet_name="DATA"),
     "dataset3": pd.read_excel("MEM#03.xlsx", sheet_name="DATA"),
     "dataset4": pd.read_excel("MEM#19 & MEM#20.xlsx", sheet_name="DATA")
-    
 }
 popup.empty()  # Remove popup after loading
 
