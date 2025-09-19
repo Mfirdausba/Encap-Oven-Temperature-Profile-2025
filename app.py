@@ -9,20 +9,19 @@ import base64
 # Streamlit Page Config
 # --------------------
 st.set_page_config(
-    page_title="Encap Oven Dashboard 2025",
+    page_title="Encap Post Cure Temperature Profile 2025",
     page_icon="📈",
     layout="wide"
 )
 
 # --------------------
-# Hide Default Streamlit Menu, Footer & Toolbar
+# Hide Default Streamlit Menu & Footer
 # --------------------
 hide_st_style = """
 <style>
 #MainMenu {visibility: hidden;} 
 footer {visibility: hidden;}    
 header {visibility: hidden;}    
-.stAppToolbar {visibility: hidden;}   /* Hides bottom-right Manage app toolbar */
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -71,7 +70,7 @@ st.markdown(
 
     <div class="custom-header">
         <img src="data:image/png;base64,{logo_base64}" alt="Logo">
-        Encap Oven Dashboard 2025
+        Encap Post Cure Temperature Profile 2025
     </div>
     """,
     unsafe_allow_html=True
@@ -146,6 +145,7 @@ datasets = {
     "dataset2": pd.read_excel("MEM#01 & MEM#02 & BMV#91.xlsx", sheet_name="DATA"),
     "dataset3": pd.read_excel("MEM#03.xlsx", sheet_name="DATA"),
     "dataset4": pd.read_excel("MEM#19 & MEM#20.xlsx", sheet_name="DATA")
+    
 }
 popup.empty()  # Remove popup after loading
 
